@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Stats</title>
+    <link rel="stylesheet" href="index.css">
+   
+</head>
+<body>
+
+  
+    <header>
+        <h1>STATISTIQUES F1</h1>
+        <a href="#drivers" id="nav-drivers">Driver Standings</a>
+        <a href="#constructors" id="nav-constructors">Constructor Standings</a>
+        <a href="#next-race" id="nav-next-race">Next Race</a>
+    </header>
+
+   
+    <section id="drivers" class="active">
+        <table>
+            <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Driver</th>
+                    <th>Constructor</th>
+                    <th>Wins</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            
+            <tbody id="driver-standings">
+                
+            </tbody>
+        </table>
+    </section>
+
+  
+    <section id="constructors">
+        <table>
+            <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Constructor</th>
+                    <th>Wins</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+           
+            <tbody id="constructor-standings">
+               
+            </tbody>
+        </table>
+    </section>
+
+    
+    <section id="next-race">
+        <h2 id="race-name"></h2>
+        <div id="countdown"></div>
+        
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
