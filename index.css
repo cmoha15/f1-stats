@@ -12,6 +12,7 @@ header {
     padding: 30px 0;
     text-align: center;
     color: white;
+    display: block;
 }
 
 header h1 {
@@ -23,19 +24,20 @@ header h1 {
     font-size: 28px;
 }
 
-
 header a {
+    display: inline-block;
     color: #ffffff; 
     background-color: #222228; 
     text-decoration: none; 
     padding: 12px 24px;
-    margin: 0 8px;
+    margin: 8px;
     border-radius: 6px; 
     font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 14px;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 header a:hover {
@@ -43,15 +45,25 @@ header a:hover {
     transform: translateY(-2px); 
 }
 
+section {
+    display: none;
+    width: 95%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow-x: auto;
+}
+
+section.active {
+    display: block;
+}
+
 table {
     width: 100%;
-    max-width: 800px;
+    min-width: 600px;
     border-collapse: collapse;
     background-color: #ffffff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    overflow: hidden;
-    margin: 40px auto; 
 }
 
 th {
@@ -79,36 +91,33 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-
 td:last-child {
     font-weight: bold;
     color: #e10600;
 }
-section {
-    display: none;
-}
 
-
-section.active {
-    display: block;
-}
- #next-race{background-color: #15151e;
+#next-race {
+    background-color: #15151e;
     padding: 30px;
     border-radius: 12px;
     text-align: center;
     font-family: 'Arial Black', Impact, sans-serif;
     max-width: 600px;
+    width: 90%;
     margin: 20px auto;
     border-top: 5px solid #e10600; 
+    box-sizing: border-box;
 }
-#race-name{
+
+#race-name {
     color: #ffffff;
     font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 25px;
     letter-spacing: 2px;
 }
-#countdown{
+
+#countdown {
     background-color: #1f1f27;
     border: 2px solid #2a2a35;
     border-radius: 8px;
@@ -116,4 +125,21 @@ section.active {
     min-width: 90px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+    
+    header a {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        text-align: center;
+    }
+    
+    #race-name {
+        font-size: 1.5rem;
+    }
 }
